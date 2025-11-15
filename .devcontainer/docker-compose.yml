@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    environment:
+      - PHP_IDE_CONFIG=serverName=localhost
+    ports:
+      - "80:80"
+      - "9000:9000"
+      - "9003:9003"
+    networks:
+      - phpexcel-network
+
+networks:
+  phpexcel-network:
+    driver: bridge

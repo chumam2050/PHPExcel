@@ -3,10 +3,10 @@
 
 require_once 'testDataFileIterator.php';
 
-class MathTrigTest extends PHPUnit_Framework_TestCase
+class MathTrigTest extends PHPUnit\Framework\TestCase
 {
 
-    public function setUp()
+    protected function setUp(): void
     {
         if (!defined('PHPEXCEL_ROOT')) {
             define('PHPEXCEL_ROOT', APPLICATION_PATH . '/');

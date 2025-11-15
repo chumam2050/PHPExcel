@@ -43,7 +43,7 @@ echo "PHPExcel tests beginning\n";
 
 if (extension_loaded('xdebug')) {
     echo "Xdebug extension loaded and running\n";
-    xdebug_enable();
+    // xdebug_enable() was removed in PHP 8 - Xdebug is always enabled when the extension is loaded
 } else {
     echo 'Xdebug not found, you should run the following at the command line: echo "zend_extension=/usr/lib64/php/modules/xdebug.so" > /etc/php.d/xdebug.ini' . "\n";
 }

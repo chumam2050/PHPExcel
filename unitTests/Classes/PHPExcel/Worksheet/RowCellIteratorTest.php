@@ -1,11 +1,11 @@
 <?php
 
-class RowCellIteratorTest extends PHPUnit_Framework_TestCase
+class RowCellIteratorTest extends PHPUnit\Framework\TestCase
 {
     public $mockWorksheet;
     public $mockRowCell;
 
-    public function setUp()
+    protected function setUp(): void
     {
         if (!defined('PHPEXCEL_ROOT')) {
             define('PHPEXCEL_ROOT', APPLICATION_PATH . '/');
