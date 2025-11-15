@@ -11,9 +11,9 @@ services:
     environment:
       - PHP_IDE_CONFIG=serverName=localhost
     ports:
-      - "80:80"
-      - "9000:9000"
-      - "9003:9003"
+      - "8070:80"
+      - "9100:9000"
+      - "9200:9003"
     networks:
       - phpexcel-network
 
